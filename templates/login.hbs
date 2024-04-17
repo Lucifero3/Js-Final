@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        body::before {
+            content: '';
+            position: fixed; /* Cover the entire page */
+            left: 0;
+            right: 0;
+            z-index: -1; /* Ensure it stays behind the content */
+            display: block;
+            background-image: url('https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            /* Apply the blur effect */
+            filter: blur(15px); /* Adjust the px value to control the amount of blur */
+            -webkit-filter: blur(15px);
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Add background color with opacity */
+            border-radius: 5px;
+            padding: 20px;
+            /* Ensure the content container is above the blurred background */
+            position: relative;
+            z-index: 1;
+            max-width: 400px; /* Adjust based on preference */
+            margin: auto; /* Center the container */
+            margin-top: 50px; /* Adjust based on preference */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            margin-bottom: 20px; /* Spacing */
+        }
+        input[type="submit"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>PROFESSOR&#128218;</h1>
+    <form action="/login" method="post">
+        <input placeholder="Name" name="name" type="text">
+        <input placeholder="Password" name="password" type="password">
+        <input class="sub" type="submit" value="Login">
+        <h3>Don't have an account?</h3>
+       <a class="button-link" href="/signup">Create a new account</a>
+        <a class="button-link" href="/auth/github">Log in with GitHub</a>
+    </form>
+</div>
+
+</body>
+</html>

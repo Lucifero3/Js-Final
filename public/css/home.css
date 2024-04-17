@@ -1,0 +1,42 @@
+/* home.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Custom styles for header */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Main content styling */
+.main-content {
+    margin-top: 30px;
+}
+/* Custom positioning and styles for badges if needed */
+.badge {
+    position: relative;
+    top: -2px;
+}
+
+/* Add any specific styles you want that deviate from Bootstrap's defaults */

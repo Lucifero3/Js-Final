@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set, viewport, and compatibility -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Signup Page</title>
+    
+    <!-- External stylesheets for Bootstrap, custom styles, and Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Internal styles for background image and container -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        body::before {
+            content: '';
+            position: fixed; 
+            left: 0;
+            right: 0;
+            z-index: -1; 
+            display: block;
+            background-image: url('https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            /* Apply the blur effect */
+            filter: blur(15px); /* Adjust the px value to control the amount of blur */
+            -webkit-filter: blur(15px);
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Add background color with opacity */
+            border-radius: 5px;
+            padding: 20px;
+            /* Ensure the content container is above the blurred background */
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Signup form container -->
+<div class="container mt-5">
+    <div class="tab-content">
+        <!-- Signup form section -->
+        <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+            <!-- Signup form -->
+            <form action="/signup" method="post">
+                <!-- Introductory message -->
+                <div class="text-center mb-3">
+                    <p>NEW? WANNA SIGNUP?</p>
+                </div>
+                <!-- Input fields for name and password -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="registerName" name="name" class="form-control" placeholder="Name" />
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="password" id="registerPassword" name="password" class="form-control" placeholder="Password" />
+                </div>
+                <!-- Signup button -->
+                <button type="submit" class="btn btn-primary btn-block mb-3">Sign Up</button>
+            </form>
+            <!-- Link to go back to the login page -->
+            <div class="text-center">
+                <a href="/">Go back to login page</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
